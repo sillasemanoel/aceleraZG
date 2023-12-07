@@ -1,0 +1,294 @@
+<script>
+  // Definição da função ergueiMaos
+  function ergueiMaos() {
+    // Verifica se o contador não existe ou é falso (0)
+    if (!ergueiMaos.contador) {
+        // Se não existe, inicializa o contador com 1
+        ergueiMaos.contador = 1;
+    } else {
+        // Se o contador já existe, incrementa o seu valor
+        ergueiMaos.contador++;
+    }
+
+    // Inicializa uma string vazia para a mensagem
+    let mensagem = "";
+
+    // Loop que itera duas vezes
+    for (let i = 0; i < 2; i++) {
+        // Se o contador é 2 e estamos na primeira iteração do loop
+        if (ergueiMaos.contador === 2 && i === 0) {
+            // Adiciona uma mensagem específica à string
+            mensagem += "Por isso...!\n";
+        }
+        // Adiciona a parte padrão da mensagem ao string
+        mensagem += "Erguei as mãos e dai glória a deus\n";
+    }
+
+    // Adiciona uma parte final à mensagem
+    mensagem += "Erguei as mãos\n";
+
+    // Verifica se o contador é igual a 3
+    if (ergueiMaos.contador === 3) {
+        // Adiciona uma mensagem específica se o contador for 3
+        mensagem += "E cantai como os filhos do senhor (de novo!)\n";
+    } else {
+        // Adiciona uma mensagem padrão se o contador não for 3
+        mensagem += "E cantai como os filhos do senhor\n";
+    }
+
+    // Exibe a mensagem no console
+    console.log(mensagem);
+  }
+
+  // Definição da função osAnimais
+  function osAnimais() {
+    // Inicialização de uma string vazia para a mensagem
+    let mensagem = "";
+
+    // Arrays contendo diferentes categorias de animais e bichos
+    const osAnimaisArray = ["O elefante", "A minhoquinha", "O canguru"];
+    const osBichosArray = ["E os passarinhos", "E os pinguins", "E o sapinho"];
+
+    // Loop externo percorrendo os elementos do osAnimaisArray
+    for (let i = 0; i < osAnimaisArray.length; i++) {
+        // Loop interno que itera duas vezes
+        for (let j = 0; j < 2; j++) {
+            // Condição especial: se estamos na segunda iteração do primeiro loop
+            if (i === 1 && j === 0) {
+                // Adiciona uma mensagem específica à string
+                mensagem += "(Para não!)\n";
+            }
+            // Adiciona a parte padrão da mensagem à string
+            mensagem += "Os animaizinhos subiram de dois em dois\n";
+        }
+
+        // Adiciona o nome do animal atual à string
+        mensagem += `${osAnimaisArray[i]}\n`;
+
+        // Adiciona a categoria de bichos correspondente ao animal atual à string
+        mensagem += `${osBichosArray[i]}, como os filhos do Senhor\n\n`;
+    }
+
+    // Exibe a mensagem no console
+    console.log(mensagem);
+  }
+
+  // Definição da função omiNoe
+  function omiNoe() {
+    // Inicialização de uma string vazia para a mensagem
+    let mensagem = "";
+
+    // Loop que itera duas vezes
+    for (let i = 0; i < 2; i++) {
+        // Adiciona a parte padrão da mensagem ao string
+        mensagem += "Deus disse a Noé: Constrói uma arca\n";
+    }
+
+    // Adiciona partes finais à mensagem
+    mensagem += "Que seja feita\n";
+    mensagem += "De madeira para os filhos do Senhor\n";
+
+    // Exibe a mensagem no console
+    console.log(mensagem);
+  }
+
+  // Definição da função osFi
+  function osFi() {
+    // Incrementa o contador de filhos do Senhor, inicializando-o se não existir
+    osFi.contador = (osFi.contador || 0) + 1;
+
+    // Inicialização de uma string vazia para a mensagem
+    let mensagem = "";
+
+    // Verifica o valor do contador para construir a mensagem
+    if (osFi.contador > 7) {
+        mensagem += "O senhor tem muitos filhos (Para não)\n";
+    } else if (osFi.contador > 6) {
+        mensagem += "Balança a cabeça, dá uma voltinha\n";
+        mensagem += "O senhor tem muitos filhos\n";
+    } else if (osFi.contador > 4) {
+        if (osFi.contador > 5) {
+            mensagem += "Balança a cabeça\n";
+            mensagem += "O senhor tem muitos filhos\n";
+        } else {
+            mensagem += "O senhor tem muitos filhos (muitos filhos)\n";
+        }
+    } else {
+        mensagem += "O senhor tem muitos filhos\n";
+    }
+
+    // Verifica novamente o contador para adicionar mais partes à mensagem
+    if (osFi.contador > 1) {
+        if (osFi.contador > 7) {
+            mensagem += "Muitos filhos ele tem\n";
+        } else if (osFi.contador > 6) {
+            mensagem += "Muitos filhos ele tem (Bonita cruz)\n";
+        } else if (osFi.contador > 3) {
+            mensagem += "Muitos filhos ele tem\n";
+        } else if (osFi.contador > 2) {
+            mensagem += "Muitos filhos ele tem (Até que eu tô em forma)\n";
+        } else {
+            mensagem += "Muitos filhos ele tem\n";
+        }
+    } else {
+        mensagem += "Todos filhos ele tem\n";
+    }
+
+    // Mais verificações e adições à mensagem com base no contador
+    if (osFi.contador > 4) {
+        if (osFi.contador > 5) {
+            mensagem += "Eu sou um deles, você também\n";
+        } else {
+            mensagem += "Eu sou um deles, você também (Que saudade dessa música)\n";
+        }
+    } else {
+        mensagem += "Eu sou um deles, você também\n";
+    }
+
+    // Verifica o contador para adicionar a parte final à mensagem
+    if (osFi.contador === 1) {
+        mensagem += "Louvemos ao senhor (braço direito!)\n";
+    } else {
+        mensagem += "Louvemos ao senhor\n";
+    }
+
+    // Exibe a mensagem no console
+    console.log(mensagem);
+  }
+
+  // Definição da função oBraco
+  function oBraco() {
+    // Incrementa o contador de braços, inicializando-o se não existir
+    oBraco.contador = (oBraco.contador || 0) + 1;
+
+    // Inicialização de uma string vazia para a mensagem
+    let mensagem = "";
+
+    // Adiciona uma parte padrão à mensagem
+    mensagem += "Braço direito, braço esquerdo\n";
+
+    // Verifica o valor do contador para adicionar partes adicionais à mensagem
+    if (oBraco.contador === 2) {
+        mensagem += "Perna direita\n";
+    } else if (oBraco.contador > 2) {
+        mensagem += "Perna direita, perna esquerda\n";
+    }
+
+    // Verifica se o contador é maior ou igual a 6 para adicionar mais partes à mensagem
+    if (oBraco.contador >= 6) {
+        mensagem += "Balança a cabeça, dá uma voltinha\n";
+
+        // Verifica se o contador é 7 para adicionar uma parte específica à mensagem
+        if (oBraco.contador === 7) {
+            mensagem += "Dá um pulinho e abraça o irmão\n";
+        } else {
+            mensagem += "Dá um pulinho\n";
+        }
+    }
+
+    // Exibe a mensagem no console
+    console.log(mensagem);
+  }
+
+  // Função para iniciar a reprodução da música, interagindo com o usuário
+  function reproduzirMusica() {
+    // Pede ao usuário para escolher entre reproduzir a música inteira ou apenas uma parte
+    const resposta1 = prompt("Deseja a reprodução da música inteira(1) e/ou somente uma das partes(2)?");
+
+    // Verifica se o usuário escolheu a opção de reproduzir a música inteira
+    if (resposta1.toLowerCase() === "1") {
+        // Exibe mensagem e chama a função para reproduzir a música inteira
+        console.log("Erguei As Mãos - Padre Marcelo Rossi(inteira)");
+        reproduzirMusicaInteira();
+    }
+    // Verifica se o usuário escolheu a opção de reproduzir apenas uma parte
+    else if (resposta1.toLowerCase() === "2") {
+        // Pede ao usuário para escolher entre a primeira e a segunda parte
+        const resposta2 = prompt("Reproduzir primeira(1) ou segunda(2) parte?");
+
+        // Verifica a escolha do usuário para a parte da música
+        if (resposta2.toLowerCase() === "1") {
+            // Exibe mensagem e chama a função para reproduzir a primeira parte
+            console.log("Erguei As Mãos - Padre Marcelo Rossi(1 parte)");
+            reproduzirPrimeiraParte();
+        } else if (resposta2.toLowerCase() === "2") {
+            // Exibe mensagem e chama a função para reproduzir a segunda parte
+            console.log("Erguei As Mãos - Padre Marcelo Rossi(2 parte)");
+            reproduzirSegundaParte();
+        } else {
+            // Se a resposta não for válida, exibe mensagem de resposta inválida
+            console.log("Resposta inválida.");
+        }
+    } else {
+        // Se a resposta não for válida, exibe mensagem de resposta inválida
+        console.log("Resposta inválida.");
+    }
+  }
+
+  // Função para reproduzir a música inteira
+  function reproduzirMusicaInteira() {
+    // Chama diversas funções para reproduzir diferentes partes da música
+    ergueiMaos();
+    osAnimais();
+    omiNoe();
+    ergueiMaos();
+    // Repete a chamada de ergueiMaos() várias vezes
+    for (let i = 0; i < 2; i++) {
+        ergueiMaos();
+    }
+    // Exibe uma mensagem e chama outras funções para reproduzir partes finais
+    console.log("E atenção agora, porque");
+    osFi();
+    osFi();
+    oBraco();
+    osFi();
+    oBraco();
+    osFi();
+    oBraco();
+    osFi();
+    oBraco();
+    osFi();
+    oBraco();
+    osFi();
+    oBraco();
+    osFi();
+    oBraco();
+  }
+
+  // Função para reproduzir a primeira parte da música
+  function reproduzirPrimeiraParte() {
+    // Chama diversas funções para reproduzir a primeira parte da música
+    ergueiMaos();
+    osAnimais();
+    omiNoe();
+    ergueiMaos();
+    // Repete a chamada de ergueiMaos() várias vezes
+    for (let i = 0; i < 2; i++) {
+        ergueiMaos();
+    }
+  }
+
+  // Função para reproduzir a segunda parte da música
+  function reproduzirSegundaParte() {
+    // Exibe uma mensagem e chama outras funções para reproduzir a segunda parte da música
+    console.log("E atenção agora, porque");
+    osFi();
+    osFi();
+    oBraco();
+    osFi();
+    oBraco();
+    osFi();
+    oBraco();
+    osFi();
+    oBraco();
+    osFi();
+    oBraco();
+    osFi();
+    oBraco();
+    osFi();
+    oBraco();
+  }
+
+  // Gloria Deus, cabei ^^
+  reproduzirMusica();
+</script>
